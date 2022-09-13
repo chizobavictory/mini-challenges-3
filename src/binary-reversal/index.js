@@ -3,6 +3,16 @@
  *
  *  * @param {string} value
  */
-function binaryReversal(value) {}
+function binaryReversal(value) {
+    let binaryNum = parseInt(value);
+    let binary = binaryNum.toString(2);
+    let padded = binary.padStart(8, "0");
+    let reversed = padded.split("").reverse().join("");
+    let result = parseInt(reversed, 2);
+    var finalResult = result.toString();
+    return finalResult;
+}
+
+console.log(binaryReversal("100"));
 
 module.exports = binaryReversal;
